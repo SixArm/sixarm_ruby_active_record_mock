@@ -1,0 +1,1 @@
+a87d5e39b724aa172d2df71c366ed8a61b8a8219e8b7cecd225c8d2ed69f548a0d483f757fa7c45ba524a1d8f5ff4e40d5ad19e1920f6333efedf9bd85735277  sixarm_ruby_active_record_mock-1.2.8.gem
