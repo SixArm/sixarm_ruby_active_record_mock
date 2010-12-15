@@ -1,15 +1,21 @@
+# -*- encoding: utf-8 -*-
 =begin rdoc
 
-= SixArm Ruby Gem: ActiveRecord mock object for testing
+= SixArm Ruby Gem » ActiveRecord Mock
 
 Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
 Copyright:: Copyright (c) 2006-2010 Joel Parker Henderson
-License:: CreativeCommons License, Non-commercial Share Alike
-License:: LGPL, GNU Lesser General Public License
+License:: Your choice of BSD, MIT, LGPL, or CreativeCommons Non-commercial Share Alike
 
-A simple mock object that provides the ActiveRecord method
-signatures read_attribute(key) and write_attribute(key,val),
-and simple record finder signatures find(id) and find(:all).
+ActiveRecord mock object for testing our Ruby On Rails gems.
+
+This provides some of the ActiveRecord method signatures we use.
+
+This provides:
+  - read_attribute(key)
+  - write_attribute(key,val)
+  - find(id)
+  - find(:all)
 
 Example:
   mock = ActiveRecordMock.new
