@@ -251,13 +251,13 @@ A new instance of ActiveRecordMock
       <pre class="lines">
 
 
-48
-49
-50
-51</pre>
+54
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_active_record_mock.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_active_record_mock.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id ops'>ops</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
  <span class='ivar'>@attributes</span><span class='op'>=</span><span class='id ops'>ops</span>
@@ -288,17 +288,17 @@ A new instance of ActiveRecordMock
       <pre class="lines">
 
 
-61
-62
-63
-64
-65
-66
 67
-68</pre>
+68
+69
+70
+71
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_active_record_mock.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_active_record_mock.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id find'>find</span><span class='lparen'>(</span><span class='id id'>id</span><span class='comma'>,</span><span class='op'>*</span><span class='id ops'>ops</span><span class='rparen'>)</span>
  <span class='kw'>case</span> <span class='id id'>id</span>
@@ -326,12 +326,12 @@ A new instance of ActiveRecordMock
       <pre class="lines">
 
 
-70
-71
-72</pre>
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_active_record_mock.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_active_record_mock.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id find='>find=</span><span class='lparen'>(</span><span class='id records'>records</span><span class='rparen'>)</span>
  <span class='cvar'>@@find</span><span class='op'>=</span><span class='id records'>records</span>
@@ -360,12 +360,12 @@ A new instance of ActiveRecordMock
       <pre class="lines">
 
 
-53
-54
-55</pre>
+59
+60
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_active_record_mock.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_active_record_mock.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id read_attribute'>read_attribute</span><span class='lparen'>(</span><span class='id k'>k</span><span class='rparen'>)</span>
  <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span>
@@ -388,12 +388,12 @@ A new instance of ActiveRecordMock
       <pre class="lines">
 
 
-57
-58
-59</pre>
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_active_record_mock.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_active_record_mock.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id write_attribute'>write_attribute</span><span class='lparen'>(</span><span class='id k'>k</span><span class='comma'>,</span><span class='id v'>v</span><span class='rparen'>)</span>
  <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span><span class='op'>=</span><span class='id v'>v</span>
@@ -408,9 +408,9 @@ A new instance of ActiveRecordMock
 </div>
     
     <div id="footer">
-  Generated on Mon Dec 13 17:49:11 2010 by 
+  Generated on Sat Feb 12 16:21:52 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.3 (ruby-1.9.2).
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>

@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_active_record_mock"
-  s.summary           = "SixArm Ruby Gem: ActiveRecord mock object for methods read_attribute and write_attribute"
+  s.summary           = "SixArm.com » Ruby » ActiveRecord mock object for methods read_attribute and write_attribute"
   s.version           = "1.2.8"
   s.author            = "SixArm"
   s.email             = "sixarm@sixarm.com"
