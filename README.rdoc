@@ -8,6 +8,13 @@ A simple mock object that provides the ActiveRecord method
 signatures read_attribute(key) and write_attribute(key,val),
 and simple record finder signatures find(id) and find(:all).
 
+
+This provides some of the ActiveRecord method signatures we use:
+  - read_attribute(key)
+  - write_attribute(key,val)
+  - find(id)
+  - find(:all)
+
 Example:
   mock = ActiveRecordMock.new
   mock.write_attribute('foo','bar')
