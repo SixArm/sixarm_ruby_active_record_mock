@@ -21,16 +21,30 @@ class ActiveRecordMock
  end
 
  def self.find(id,*ops)
-  case id
-  when :all
-   @@find
-  else
-   @@find.each{|x| if x.read_attribute(:id)==id then return x end } or nil
-  end
+   case id
+   when nil
+     nil
+   when :all
+     @@find
+   else
+     @@find.each{|x| if x.read_attribute(:id)==id then return x end } or nil
+   end
  end
 
  def self.find=(records)
    @@find=records
+ end
+
+ def method_missing(m, *args, &block)
+   if m=~/=$/
+     write_attribute(m.to_s.sub(/=$/,'').to_sym, *args)
+   else
+     if m=~/_before_type_cast$/
+       read_attribute($`.to_sym)
+     else
+       read_attribute(m)
+     end
+   end
  end
 
 end

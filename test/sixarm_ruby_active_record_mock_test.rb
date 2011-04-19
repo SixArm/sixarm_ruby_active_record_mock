@@ -45,6 +45,22 @@ class Testing < Test::Unit::TestCase
    x = mock.read_attribute(:hoo); assert_equal(x,'dar',"x:#{x},dar")
  end
 
+ def test_attribute_via_initializer
+   mock = ActiveRecordMock.new(:foo => 'bar')
+   assert_equal("bar", mock.foo, 'mock.foo should equal "bar"')
+ end
+
+ def test_attribute_via_assignment
+   mock = ActiveRecordMock.new()
+   mock.foo='bar'
+   assert_equal("bar", mock.foo, 'mock.foo should equal "bar"')
+ end
+
+ def test_attribute_before_type_cast
+   mock = ActiveRecordMock.new(:foo => 'bar')
+   assert_equal("bar", mock.foo_before_type_cast, 'mock.foo_before_type_cast should equal "bar"')
+ end   
+
  def test_find
 
    anne = ActiveRecordMock.new(:id=>1, :name=>'Anne')
@@ -67,7 +83,9 @@ class Testing < Test::Unit::TestCase
    x = ActiveRecordMock.find(1); assert_equal(x,anne,"find(1) x:#{x},anne")
    x = ActiveRecordMock.find(2); assert_equal(x,beth,"find(2) x:#{x},beth")
    x = ActiveRecordMock.find(3); assert_equal(x,cate,"find(3) x:#{x},cate")
-  
+
+   # Retrieve by nil
+   x = ActiveRecordMock.find(nil); assert_nil(x,"find(nil) should be nil")
  end
 
 end
