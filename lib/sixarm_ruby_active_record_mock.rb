@@ -23,11 +23,12 @@ class ActiveRecordMock
  def self.find(id,*ops)
    case id
    when nil
-     nil
+     raise ArgumentError.new
    when :all
-     @@find
+     return @@find
    else
-     @@find.each{|x| if x.read_attribute(:id)==id then return x end } or nil
+     @@find.each{|x| if x.read_attribute(:id)==id then return x end }
+     return nil
    end
  end
 
