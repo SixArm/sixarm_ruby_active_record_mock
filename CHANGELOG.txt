@@ -1,5 +1,6 @@
 CHANGELOG
 
+2011-05-01 1.4.6 Add find_by_id
 2011-04-25 1.4.4 Add find by nil
 2011-04-19 1.4.2 Add <attribute>_before_type_cast
 2011-04-19 1.4.0 Add attributes via method_missing

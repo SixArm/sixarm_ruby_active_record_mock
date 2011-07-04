@@ -1,1 +1,0 @@
-ab867375f7e63f128f6d9b71ccaa47c30c4b0f35d9c8e9b76c698e6a0ab528f9ce805dad618134f78b2e03f1c52fb174a7e0fb1d9d96f1c44ff16dd555683a4f  sixarm_ruby_active_record_mock-1.4.4.gem

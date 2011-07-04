@@ -79,13 +79,24 @@ class Testing < Test::Unit::TestCase
    x = ActiveRecordMock.find(:all)
    assert_equal(x,all,"find :all x:#{x}")
 
-   # Retrieve by id
+   # Retrieve via #find
    x = ActiveRecordMock.find(1); assert_equal(x,anne,"find(1) x:#{x},anne")
    x = ActiveRecordMock.find(2); assert_equal(x,beth,"find(2) x:#{x},beth")
    x = ActiveRecordMock.find(3); assert_equal(x,cate,"find(3) x:#{x},cate")
 
-   # Retrieve by nil
-   x = ActiveRecordMock.find(nil); assert_nil(x,"find(nil) should be nil")
- end
+   # Retrieve via #find_by_id
+   x = ActiveRecordMock.find_by_id(1); assert_equal(x,anne,"find(1) x:#{x},anne")
+   x = ActiveRecordMock.find_by_id(2); assert_equal(x,beth,"find(2) x:#{x},beth")
+   x = ActiveRecordMock.find_by_id(3); assert_equal(x,cate,"find(3) x:#{x},cate")
 
+   # Retrieve by #find(nil) => ArgumentError
+   assert_raise(ArgumentError) do
+     x = ActiveRecordMock.find(nil);
+   end
+
+   # Retrieve by #find_by_id(nil) => nil
+   x = ActiveRecordMock.find_by_id(nil); assert_nil(x,"find(nil) should be nil")
+
+ end
+ 
 end

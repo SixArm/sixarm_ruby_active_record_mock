@@ -20,7 +20,7 @@ class ActiveRecordMock
   @attributes[k]=v
  end
 
- def self.find(id,*ops)
+ def self.find(id,ops={})
    case id
    when nil
      raise ArgumentError.new
@@ -29,6 +29,15 @@ class ActiveRecordMock
    else
      @@find.each{|x| if x.read_attribute(:id)==id then return x end }
      return nil
+   end
+ end
+
+ def self.find_by_id(id,ops={})
+   case id
+   when nil
+     nil
+   else
+     self.find(id,ops)
    end
  end
 
