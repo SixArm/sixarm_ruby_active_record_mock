@@ -1,4 +1,4 @@
-## Changes
+# Changes
 
 * 2012-03-14 1.4.6 Update docs, tests
 * 2011-05-01 1.4.6 Add find_by_id
