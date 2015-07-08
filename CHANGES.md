@@ -1,6 +1,7 @@
 # Changes
 
-* 2012-03-14 1.4.6 Update docs, tests
+* 2015-07-07 1.4.8 Update gemspec to use file manifest
+* 2012-03-14 1.4.7 Update docs, tests
 * 2011-05-01 1.4.6 Add find_by_id
 * 2011-04-25 1.4.4 Add find by nil
 * 2011-04-19 1.4.2 Add <attribute>_before_type_cast
