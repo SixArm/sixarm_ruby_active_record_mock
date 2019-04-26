@@ -4,7 +4,7 @@ require "simplecov"
 SimpleCov.start
 require "sixarm_ruby_active_record_mock"
 
-class Testing < Test::Unit::TestCase
+class Testing < Minitest::Test
 
  def test_instantiation
   mock1 = ActiveRecordMock.new
